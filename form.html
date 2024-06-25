@@ -1,0 +1,149 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{
+  background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('/static/loanpic.jpg');
+  background-repeat: no-repeat;
+  background-size: 1400px 800px;
+}
+*{
+    margin:0;
+    padding:0;
+    font-family: Centuary Gothic;
+}
+header{
+    height:30px;
+    background-size: cover;
+    background-position: center;
+}
+ul{
+    float: right;
+    list-style-type: none;
+    margin-top: 25px;
+}
+ul li{
+    display: inline-block;
+}
+ul li a{
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 20px;
+    border: 1px solid transparent;
+}
+ul li a:hover{
+    background-color: #fff;
+    color:#000;
+    transition: 0.6s ease;
+}
+ul li.active a{
+    background-color: #fff;
+    color:#000;
+}
+.main{
+    max-width: 1200px;
+    margin:auto;
+}
+input[type=button],input[type=submit]{
+  background-color: #ff9966;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+input[type=text] {
+  border: 2px;
+  height:20px;
+  border-radius:4px;
+}
+h4{
+color:white;
+}
+table
+{ 
+margin-left:auto;
+margin-right:auto;
+margin-top:140px;
+}
+</style>
+</head>
+   <body>
+   <header>
+        <div class="main">
+            <ul>
+                    <li ><a href="/">Home</a></li>
+                    <li><a href="/form">Predict Loan</a></li>
+            </ul>
+        </div>
+	</header>
+   <table style="width:400px;height:350px" ; align='center'>
+      <form action = "{{ url_for('predict') }}" method = "POST">
+		 <tr>
+		 <td><b><h4>Gender:</h4></b>
+		 </td>
+         <td>
+		 <select name="Gender" width="48" height="48">
+		<option value="Male">Male</option>
+		<option value="Female">Female</option>
+		</select>
+		</td>
+		</tr>
+		<tr>
+		 <td><b><h4>Married:</h4></b>
+		 </td>
+         <td>
+		 <select name="Married" width="48" height="48">
+		<option value="Yes">Yes</option>
+		<option value="No">No</option>
+		</select>
+		</td>
+		</tr>
+		<tr>
+		 <td><b><h4>Education:</h4></b>
+		 </td>
+         <td>
+		 <select name="Education" width="48" height="48">
+		<option value="Graduate">Graduate</option>
+		<option value="NotGraduate">NotGraduate</option>
+		</select>
+		</td>
+		</tr>
+		<tr>
+		 <td><b><h4>Self-Employed:</h4></b>
+		 </td>
+         <td>
+		 <select name="Self-Employed" width="48" height="48">
+		<option value="Yes">Yes</option>
+		<option value="No">No</option>
+		</select>
+		</td>
+		</tr>
+		<tr>
+		 <td color="white" ><b><h4 color="white" >Applicant-Income:</h4></b>
+		 </td>
+         <td>
+		 <b><input type = "text" width="48px" height="1000px" name = "CoapplicantIncome" /></b>
+		 </td>
+		 </tr>
+		 <tr>
+		 <td color="white" ><b><h4 color="white" >LoanAmountTerm:</h4></b>
+		 </td>
+         <td>
+		 <b><input type = "text" width="48px" height="1000px" name = "Loan_Amount_Term" /></b>
+		 </td>
+		 </tr>
+		 <tr>
+		 <td color="white" ><b><h4 color="white" >Credit-History:</h4></b>
+		 </td>
+         <td>
+		 <b><input type = "text" width="48px" height="1000px" name = "Credit_History" /></b>
+		 </td>
+		 </tr>
+		 <tr><td></td><td><input type="submit" value="submit" align="center-right"></td></tr> 
+      </form>
+	  </table>
+   </body>
+</html>

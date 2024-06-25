@@ -1,0 +1,68 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{
+  background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('/static/loanpic.jpg');
+  background-repeat: no-repeat;
+  background-size: 1400px 800px;
+}
+*{
+    margin:0;
+    padding:0;
+    font-family: Centuary Gothic;
+}
+header{
+    height:30px;
+    background-size: cover;
+    background-position: center;
+}
+ul{
+    float: right;
+    list-style-type: none;
+    margin-top: 25px;
+}
+ul li{
+    display: inline-block;
+}
+ul li a{
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 20px;
+    border: 1px solid transparent;
+}
+ul li a:hover{
+    background-color: #fff;
+    color:#000;
+    transition: 0.6s ease;
+}
+ul li.active a{
+    background-color: #fff;
+    color:#000;
+}
+.main{
+    max-width: 1200px;
+    margin:auto;
+}
+p
+{
+font-size:40px;
+font-style:italic;
+color:white;
+margin-top:260px;
+margin-left:300px;
+}
+</style>
+</head>
+<body>
+<header>
+        <div class="main">
+            <ul>
+                    <li ><a href="/">Home</a></li>
+                    <li><a href="/form">Predict Loan</a></li>
+            </ul>
+        </div>
+</header>
+<p>{{prediction_text}}</p>
+</body>
+</html>
